@@ -29,7 +29,7 @@ const promptUser = () => {
                 message: 'What is your e-mail'
             },
             {
-                type: 'input',
+                type: 'number',
                 name: 'officeNumber',
                 message: 'What is your office number?',
                 when: ({role}) => {
