@@ -1,4 +1,5 @@
 const inquirer = require('inquirer')
+const Employee = require('./lib/Employee')
 
 const employees = []
 
@@ -18,7 +19,7 @@ const promptUser = () => {
                 message: 'What is your name?'
             },
             {
-                type: 'input',
+                type: 'number',
                 name: 'id',
                 message: 'What is your user ID?'
             },
@@ -82,6 +83,6 @@ const promptUser = () => {
 }
 
 promptUser()
-.then(() =>{
-    console.log(employees)
+.then((data) =>{
+    console.log(data)
 })
