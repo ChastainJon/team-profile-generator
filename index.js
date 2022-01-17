@@ -1,5 +1,9 @@
 const inquirer = require('inquirer')
 const Employee = require('./lib/Employee')
+const generatePage = require('./src/generate-page')
+const fs = require('fs')
+const {resolve} = require('path')
+
 const team = {
     employees: []
 }
@@ -87,5 +91,20 @@ const promptUser = team => {
 
 promptUser(team)
 .then((data) =>{
-    console.log(data.employees)
+    return generatePage(data.employees)
+})
+.then((pageHTML) =>{
+    fs.writeFile('./dist/index.html', pageHTML, err => {
+        if(err){
+            reject(err)
+            //return out of the function here to mkae sure the Promise doesn't accidentally execute the resolve() function as well
+            return
+        }
+
+        //if everyhting went well, resolve the Promise and send the succesful data to the '.then()' method
+        // resolve({
+        //     ok: true,
+        //     message: 'File created!'
+        // })
+    })
 })
