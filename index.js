@@ -33,7 +33,7 @@ const promptUser = team => {
             {
                 type: 'input',
                 name: 'email',
-                message: 'What is your e-mail'
+                message: 'What is your e-mail?'
             },
             {
                 type: 'number',
@@ -100,11 +100,6 @@ promptUser(team)
             //return out of the function here to mkae sure the Promise doesn't accidentally execute the resolve() function as well
             return
         }
-
-        //if everyhting went well, resolve the Promise and send the succesful data to the '.then()' method
-        // resolve({
-        //     ok: true,
-        //     message: 'File created!'
-        // })
     })
+    console.log('Page generated in /dist')
 })

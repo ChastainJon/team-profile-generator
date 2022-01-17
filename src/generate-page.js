@@ -31,7 +31,10 @@ return`
                         </div>
                         <div class="card-body">
                             <p>ID: ${id}</p>
-                            <p>Email: ${email}</p>
+                            <p>
+                                Email:
+                                <a href="mailto: ${email}">${email}</a>
+                            </p>
                             <p>Office Number: ${officeNumber}</p>
                         </div>
                     </div>
@@ -53,9 +56,12 @@ return`
                         </div>
                         <div class="card-body">
                             <p>ID: ${id}</p>
-                            <p>Email: ${email}</p>
                             <p>
-                                GitHub: <a href="github.com/${githubUsername}">${githubUsername}</a>
+                                Email:
+                                <a href="mailto: ${email}">${email}</a>
+                            </p>
+                            <p>
+                                GitHub: <a href="https://www.github.com/${githubUsername}">${githubUsername}</a>
                             </p>
                         </div>
                     </div>
@@ -79,7 +85,10 @@ return`
                     </div>
                     <div class="card-body">
                         <p>ID: ${id}</p>
-                        <p>Email: ${email}</p>
+                        <p>
+                            Email:
+                            <a href="mailto: ${email}">${email}</a>
+                        </p>
                         <p>School: ${school}</p>
                     </div>
                 </div>
