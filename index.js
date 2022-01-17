@@ -1,9 +1,12 @@
 const inquirer = require('inquirer')
 const Employee = require('./lib/Employee')
-
-const employees = []
-
-const promptUser = () => {
+const team = {
+    employees: []
+}
+const promptUser = team => {
+    if(!team.employees){
+       team.employees = []
+    }
     return inquirer
         .prompt([
             {
@@ -73,16 +76,16 @@ const promptUser = () => {
             }
 
         ]).then(employeeData =>{
-            employees.push(employeeData)
+            team.employees.push(employeeData)
             if(employeeData.confirmNewEmployee){
-                return (promptUser(employeeData))
+                return (promptUser(team))
             }else{
-                return employeeData
+                return team
             }
         })
 }
 
-promptUser()
+promptUser(team)
 .then((data) =>{
-    console.log(data)
+    console.log(data.employees)
 })
