@@ -19,7 +19,7 @@ The Team Profile Generator allows a user to generate a webpage that displays the
 To run the application please ensure that the `Inquirer` and `Jest` npm packages are installed correctly. Once the npm packages are installed correctly, to run test run 'npm run test' in console. To run the application run 'node index' in the console. Follow the prompts displayed and once done a HTML file will be generated in the dist folder.
 
 ## Tests
-https://drive.google.com/file/d/15WpuiSnYajL0G6GT2Ea4_pZkD6Dz7iyQ/view
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1642391708/video_to_markdown/images/google-drive--15WpuiSnYajL0G6GT2Ea4_pZkD6Dz7iyQ-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://drive.google.com/file/d/15WpuiSnYajL0G6GT2Ea4_pZkD6Dz7iyQ/view "")
 
 ## Credits
 [Jonathan Chastain](https://github.com/ChastainJon)
